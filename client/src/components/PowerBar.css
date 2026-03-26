@@ -1,0 +1,139 @@
+/* ===== Power Bar Wrapper ===== */
+.power-bar-wrapper {
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.power-bar-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #f1c40f;
+  text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+}
+
+/* ===== Power Bar Container ===== */
+.power-bar-container {
+  position: relative;
+  display: flex;
+  height: 50px;
+  border-radius: 8px;
+  overflow: visible;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Individual Segments ===== */
+.power-bar-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: opacity 0.2s ease;
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.power-bar-segment:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.power-bar-segment:last-child {
+  border-radius: 0 6px 6px 0;
+  border-right: none;
+}
+
+.segment-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ===== Slider ===== */
+.power-bar-slider {
+  position: absolute;
+  top: -12px;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: none;
+  pointer-events: none;
+}
+
+.slider-paused {
+  opacity: 0.6;
+}
+
+.slider-arrow {
+  color: #f1c40f;
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(241, 196, 15, 0.8);
+  animation: pulse-glow 0.5s ease-in-out infinite alternate;
+}
+
+.slider-line {
+  width: 3px;
+  height: 54px;
+  background: #f1c40f;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(241, 196, 15, 0.8);
+  border-radius: 2px;
+}
+
+@keyframes pulse-glow {
+  from { text-shadow: 0 0 8px rgba(241, 196, 15, 0.8); }
+  to   { text-shadow: 0 0 16px rgba(241, 196, 15, 1); }
+}
+
+/* ===== Legend ===== */
+.power-bar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.legend-text {
+  font-size: 0.72rem;
+  color: #ddd;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .power-bar-container {
+    height: 40px;
+  }
+
+  .slider-line {
+    height: 44px;
+  }
+
+  .segment-label {
+    font-size: 0.7rem;
+  }
+
+  .legend-text {
+    font-size: 0.65rem;
+  }
+}
