@@ -1,18 +1,4 @@
-/**
- * Probability Distributions for Batting Styles
- * 
- * Each batting style has a set of outcomes with assigned probabilities.
- * The probabilities MUST sum exactly to 1.0.
- * 
- * The power bar is divided into segments proportional to these probabilities.
- * For example, if Wicket = 0.40, then 40% of the power bar represents the Wicket zone.
- * 
- * Aggressive: High risk (40% wicket chance) but high reward (15% six, 10% four).
- * Defensive:  Low risk (15% wicket chance) but low reward (5% six, 5% four).
- */
 
-// Each entry: { label, probability, color }
-// Order determines segment placement on the power bar (left to right).
 
 export const AGGRESSIVE_PROBABILITIES = [
   { label: 'Wicket', value: 'W', probability: 0.40, color: '#e74c3c' },   // Red - Danger
