@@ -1,0 +1,152 @@
+/* ===== Game Controls Container ===== */
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.controls-title {
+  text-align: center;
+  font-size: 1rem;
+  color: #f1c40f;
+  margin-bottom: 8px;
+}
+
+/* ===== Style Selection Buttons ===== */
+.style-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.style-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 200px;
+}
+
+.style-desc {
+  font-size: 0.65rem;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+/* Aggressive button */
+.aggressive-btn {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  border-color: #e74c3c;
+}
+
+.aggressive-btn.active {
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.6);
+  transform: scale(1.05);
+  border-color: #f1c40f;
+}
+
+.aggressive-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+}
+
+/* Defensive button */
+.defensive-btn {
+  background: linear-gradient(135deg, #2471a3, #3498db);
+  border-color: #3498db;
+}
+
+.defensive-btn.active {
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.6);
+  transform: scale(1.05);
+  border-color: #f1c40f;
+}
+
+.defensive-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #3498db, #5dade2);
+}
+
+/* ===== Action Buttons ===== */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.play-shot-btn {
+  padding: 16px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.play-shot-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2ecc71, #58d68d);
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.5);
+  transform: translateY(-2px);
+}
+
+.play-shot-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.play-shot-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.restart-btn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  background: linear-gradient(135deg, #95a5a6, #bdc3c7);
+  transform: translateY(-1px);
+}
+
+/* Disabled state for style buttons */
+.style-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .style-btn {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+
+  .play-shot-btn {
+    font-size: 1rem;
+    padding: 14px 20px;
+  }
+}
