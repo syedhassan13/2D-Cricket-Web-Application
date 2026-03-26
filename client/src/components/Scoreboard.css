@@ -1,0 +1,81 @@
+/* ===== Scoreboard Container ===== */
+.scoreboard {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(231, 76, 60, 0.2);
+}
+
+.scoreboard-title {
+  font-size: 1.1rem;
+  color: #f1c40f;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ===== Stats Grid ===== */
+.scoreboard-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  min-width: 80px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.runs-value {
+  color: #2ecc71;
+}
+
+.wickets-value {
+  color: #e74c3c;
+}
+
+.overs-value {
+  color: #3498db;
+}
+
+/* ===== Score Summary ===== */
+.score-summary {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #bbb;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .stat-box {
+    padding: 6px 10px;
+    min-width: 65px;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+}
