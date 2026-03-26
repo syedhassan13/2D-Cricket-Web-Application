@@ -1,0 +1,168 @@
+/* ===== Full-screen Overlay ===== */
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: overlayFadeIn 0.5s ease;
+  padding: 20px;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ===== Game Over Card ===== */
+.game-over-card {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  border: 3px solid #f1c40f;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  animation: cardSlideIn 0.5s ease;
+  box-shadow: 0 10px 40px rgba(241, 196, 15, 0.2);
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.game-over-title {
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+}
+
+.end-reason {
+  font-size: 1rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ===== Final Score Display ===== */
+.final-score {
+  margin: 20px 0;
+}
+
+.final-score-main {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.final-runs {
+  color: #2ecc71;
+}
+
+.final-separator {
+  color: #fff;
+  margin: 0 5px;
+}
+
+.final-wickets {
+  color: #e74c3c;
+}
+
+.final-overs {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* ===== Performance Text ===== */
+.performance-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.perf-outstanding { color: #f1c40f; }
+.perf-great       { color: #2ecc71; }
+.perf-good        { color: #3498db; }
+.perf-okay        { color: #f39c12; }
+.perf-poor        { color: #e74c3c; }
+
+/* ===== Stats Grid ===== */
+.game-over-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.go-stat {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.go-stat-label {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.go-stat-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin-top: 4px;
+}
+
+/* ===== Play Again Button ===== */
+.play-again-btn {
+  margin-top: 20px;
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(46, 204, 113, 0.3);
+}
+
+.play-again-btn:hover {
+  background: linear-gradient(135deg, #2ecc71, #58d68d);
+  box-shadow: 0 6px 24px rgba(46, 204, 113, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .game-over-card {
+    padding: 20px;
+  }
+
+  .game-over-title {
+    font-size: 1.5rem;
+  }
+
+  .final-score-main {
+    font-size: 2.5rem;
+  }
+}
